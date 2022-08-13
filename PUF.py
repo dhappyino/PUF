@@ -1,6 +1,8 @@
 import hashlib
 import random
+
 array = []
+
 password = input('使用者輸入密碼:')
 print('使用者密碼:', password)
 hash_password = hashlib.sha256(password.encode(
@@ -15,5 +17,19 @@ while value != 0:
     binaryString = str(value % 2) + binaryString
     value //= 2
 print("二進位: ", binaryString)
-array = random.randint(10, 99) for x in range(1024)
+print()
+array = [random.randint(10, 99) for x in range(1024)]
 print(array)
+print(len(array))  # 1024個
+print("--------------------第一組--------------------")
+print(array[0:256])
+print()
+print("--------------------第二組--------------------")
+print(array[256:512])
+print()
+print("--------------------第三組--------------------")
+print(array[512:768])
+print()
+print("--------------------第四組--------------------")
+print(array[768:1024])
+print()
